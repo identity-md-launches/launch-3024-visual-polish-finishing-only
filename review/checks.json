@@ -1,0 +1,239 @@
+{
+  "date": "2026-11-06",
+  "scope": "Static export; Chromium; real read-only requests via a temporary curl relay; isolated wallet/RPC fixtures for transaction UI.",
+  "probe": {
+    "passed": 15,
+    "total": 16,
+    "checks": [
+      {
+        "name": "render",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 37488,
+        "output": "renders, no script errors or missing local files"
+      },
+      {
+        "name": "layout",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 0,
+        "output": "no horizontal scroll at 320, 390 or 1440\nno text box overlaps another\nno floating control covers text\nno text cut off by overflow: hidden"
+      },
+      {
+        "name": "targets",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 0,
+        "output": "all 3 controls at least 24px or spaced at 390\n2 under the 44px comfortable size"
+      },
+      {
+        "name": "contrast",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 0,
+        "output": "all measured text meets 4.5:1 (3:1 large)\n102 text boxes over images, video, canvas or gradients not measured"
+      },
+      {
+        "name": "casing",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 0,
+        "output": "3 text boxes inside SVG artwork not measured\nno all-caps text in content"
+      },
+      {
+        "name": "tracking",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 0,
+        "output": "letter-spacing natural in content (display type may run tight)"
+      },
+      {
+        "name": "eyebrows",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 2,
+        "output": "no kicker labels above headings"
+      },
+      {
+        "name": "type-sizes",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 1,
+        "output": "390: 4 sizes in use, 4 with one-offs (12px\u00d732, 14px\u00d712, 24px\u00d713, 56px\u00d72)\n1440: 5 sizes in use, 6 with one-offs (12px\u00d730, 14px\u00d718, 16px\u00d72, 24px\u00d712, 36px\u00d71, 96px\u00d72)\nbar: 6 sizes used more than once, 8 counting one-offs, per width"
+      },
+      {
+        "name": "type-faces",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 0,
+        "output": "families (3): figtree, fraunces, jetbrains mono\nweights (3): 400, 600, 700"
+      },
+      {
+        "name": "glyphs",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 1,
+        "output": "no em dashes or emoji in text"
+      },
+      {
+        "name": "slogans",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 0,
+        "output": "no two-beat taglines"
+      },
+      {
+        "name": "repetition",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 1,
+        "output": "no repeated lines"
+      },
+      {
+        "name": "copy-budget",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 1,
+        "output": "prose on the first screen: 58 words at 390 (bar 60), 58 at 1440 (bar 90)\nall words on the first screen: 85 at 390, 81 at 1440\nwhole page: 309 words, 159 of them prose"
+      },
+      {
+        "name": "chrome",
+        "passed": false,
+        "exitCode": 1,
+        "durationMs": 0,
+        "output": "border and shadow together: 0\ncards inside cards: 1 (main.main-content > section.panel.stages:nth-of-type(5) > ol.stage-grid > li.stage-card.stage-legend:nth-of-type(5) in body > div.wrap:nth-of-type(1) > main.main-content > section.panel.stages:nth-of-type(5))\ngradient text: 0"
+      },
+      {
+        "name": "motion",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 0,
+        "output": "transition: all on 0 elements\nendless animations: 18; still running with reduced motion: 0"
+      },
+      {
+        "name": "share",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 0,
+        "output": "title \"Wheelings\", favicon, og:title, og:image, description"
+      }
+    ]
+  },
+  "interactions": [
+    {
+      "name": "Static hosting",
+      "detail": "Root and subpath HTML/assets return HTTP 200 with correct PNG MIME.",
+      "passed": true
+    },
+    {
+      "name": "Live chain reads",
+      "detail": "339 / 0 Wheelings adopted",
+      "passed": true
+    },
+    {
+      "name": "No-wallet interaction",
+      "detail": "Keyboard opens four existing wallet app links; Back restores Connect wallet.",
+      "passed": true
+    },
+    {
+      "name": "EIP-6963 connection",
+      "detail": "Named wallet connects; address/Sepolia and adoption action are visible on the first 390px screen.",
+      "passed": true
+    },
+    {
+      "name": "Adopt + cancellation",
+      "detail": "Correct deployed address, selector, value, gas and explicit chainId; cancellation recovers.",
+      "passed": true
+    },
+    {
+      "name": "Late chain change safeguard",
+      "detail": "Changing chain during estimation prevents eth_sendTransaction.",
+      "passed": true
+    },
+    {
+      "name": "Wrong network recovery",
+      "detail": "Existing Switch to Sepolia control requests the correct chain.",
+      "passed": true
+    },
+    {
+      "name": "Pet art integrity",
+      "detail": "The fixture SVG is displayed byte-for-byte with no image filter or transform.",
+      "passed": true
+    },
+    {
+      "name": "Cheer control",
+      "detail": "Cheer is on the first 390px screen, reaches the wallet with correct pet ID/chain, and recovers on rejection.",
+      "passed": true
+    },
+    {
+      "name": "Pending + confirmed cheer",
+      "detail": "Pending disables actions; receipt refresh produces cheering decoration and disables repeated cheer.",
+      "passed": true
+    },
+    {
+      "name": "Populated mobile layout",
+      "detail": "Long golden-collar label and all board columns remain accessible at 320/390; table scrolls inside its box.",
+      "passed": true
+    },
+    {
+      "name": "Motion preferences",
+      "detail": "Mouse parallax works; reduced motion stops all animations and removes parallax.",
+      "passed": true
+    },
+    {
+      "name": "Pause scene",
+      "detail": "Native checkbox pauses the illustrated scene with keyboard support.",
+      "passed": true
+    },
+    {
+      "name": "Disconnect",
+      "detail": "Existing Disconnect clears the saved wallet and restores Connect.",
+      "passed": true
+    },
+    {
+      "name": "Board art cache",
+      "detail": "Unchanged pets reuse SVGs; XP, stage, mood and collar changes each reload exactly one image.",
+      "passed": true
+    },
+    {
+      "name": "Status deadline + startup",
+      "detail": "Contract/board load while status hangs; pending deployment notice stays hidden; status aborts after its eight-second deadline.",
+      "passed": true
+    },
+    {
+      "name": "Console",
+      "detail": "No console errors or uncaught script exceptions in the relayed/fixture interaction run.",
+      "passed": true
+    }
+  ],
+  "consoleErrorsInInteractionRun": [],
+  "limits": [
+    "No transactions broadcast or real wallet signatures.",
+    "No WebKit, physical device, native zoom, or screen reader session.",
+    "External requests were relayed only in tests; no relay is shipped.",
+    "Probe contrast checks exclude gradients and artwork; see separately sampled contrast results."
+  ],
+  "sourceIntegrity": {
+    "originalAppScriptSha256AfterSixFixes": "be602d8a55f0cd17092efe718597d11039309a9f8aa74ab65cf2e4820087e516",
+    "originalTextAndIdsPreserved": true,
+    "sectionOrderPreserved": true
+  },
+  "export": {
+    "index.html": {
+      "bytes": 98555,
+      "sha256": "14ca00bc5026d1ad09c2d3854f3bf88d478da00daa73091b3f52dcf4377d70f3"
+    },
+    "favicon.svg": {
+      "bytes": 1149,
+      "sha256": "b4fd1e986561b67b57dcda1c4ca10dc9e2c1d5d6193198aec6062ab2442f39de"
+    },
+    "og.png": {
+      "bytes": 448280,
+      "sha256": "dd51d70ba2999bbd1e50ff762b7a5cfe77cf4e371677dad08abdfabb2cd851f6"
+    },
+    "card.png": {
+      "bytes": 87681,
+      "sha256": "7a4b79d916907f0ff4e683f3ce597b6e5ebbb5d79c5d57d2e7fceb852f29ec98"
+    }
+  }
+}

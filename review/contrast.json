@@ -1,0 +1,160 @@
+[
+  {
+    "selector": ".tag",
+    "foreground": [
+      195,
+      203,
+      216
+    ],
+    "sampledBackground": [
+      15,
+      21,
+      37
+    ],
+    "ratio": 11.14,
+    "samplePosition": [
+      117,
+      278
+    ]
+  },
+  {
+    "selector": ".eyebrow",
+    "foreground": [
+      172,
+      183,
+      204
+    ],
+    "sampledBackground": [
+      13,
+      19,
+      35
+    ],
+    "ratio": 9.17,
+    "samplePosition": [
+      117,
+      87
+    ]
+  },
+  {
+    "selector": "#wState",
+    "foreground": [
+      172,
+      183,
+      204
+    ],
+    "sampledBackground": [
+      16,
+      19,
+      33
+    ],
+    "ratio": 9.15,
+    "samplePosition": [
+      244,
+      474
+    ]
+  },
+  {
+    "selector": ".step p",
+    "foreground": [
+      172,
+      183,
+      204
+    ],
+    "sampledBackground": [
+      23,
+      31,
+      50
+    ],
+    "ratio": 8.13,
+    "samplePosition": [
+      109,
+      1265
+    ]
+  },
+  {
+    "selector": ".stage-card p",
+    "foreground": [
+      172,
+      183,
+      204
+    ],
+    "sampledBackground": [
+      25,
+      35,
+      55
+    ],
+    "ratio": 7.78,
+    "samplePosition": [
+      123,
+      1722
+    ]
+  },
+  {
+    "selector": ".stage-xp",
+    "foreground": [
+      255,
+      200,
+      97
+    ],
+    "sampledBackground": [
+      24,
+      34,
+      55
+    ],
+    "ratio": 10.35,
+    "samplePosition": [
+      189,
+      1689
+    ]
+  },
+  {
+    "selector": ".section-title",
+    "foreground": [
+      241,
+      234,
+      217
+    ],
+    "sampledBackground": [
+      27,
+      36,
+      54
+    ],
+    "ratio": 12.95,
+    "samplePosition": [
+      109,
+      1032
+    ]
+  },
+  {
+    "selector": ".btn.primary",
+    "foreground": [
+      48,
+      32,
+      11
+    ],
+    "sampledBackground": [
+      255,
+      213,
+      129
+    ],
+    "ratio": 11.28,
+    "samplePosition": [
+      100,
+      474
+    ]
+  },
+  {
+    "selector": ".chip (phone, worst-case white scene)",
+    "foreground": [
+      241,
+      234,
+      217
+    ],
+    "compositedBackgroundBound": [
+      81,
+      84,
+      96
+    ],
+    "ratio": 6.28
+  }
+]
