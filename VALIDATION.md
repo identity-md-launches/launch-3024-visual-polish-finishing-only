@@ -2,6 +2,8 @@
 
 Validation date: 2026-11-06. This is a worker-side record, not independent certification.
 
+**Revision:** the current findings, commands, results and limitations are in [review/REVISION.md](review/REVISION.md) and [review/revision-checks.json](review/revision-checks.json). All twelve reviewer findings are answered in `.imd-responses.json`. The record below describes the accepted first round and is superseded by the revision report where values differ. The four screenshots have been refreshed from the final revised export; `review/checks.json` and `review/contrast.json` retain the earlier round's historical measurements.
+
 ## Result
 
 | Area | Result |

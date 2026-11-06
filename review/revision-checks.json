@@ -1,0 +1,685 @@
+{
+  "date": "2026-11-06",
+  "scope": "Revision of accepted Wheelings visual finishing; worker-side evidence only.",
+  "findings": {
+    "fixed": 11,
+    "disputedBecauseScriptLocked": 1,
+    "responses": ".imd-responses.json"
+  },
+  "export": {
+    "passed": true,
+    "totalBytes": 686180,
+    "assets": {
+      "index.html": {
+        "bytes": 99155,
+        "sha256": "1aecc37d302c5dd31c5bec3be6b33f5023fc39922698881808c4844ad14f9c2c"
+      },
+      "favicon.svg": {
+        "bytes": 1149,
+        "sha256": "b4fd1e986561b67b57dcda1c4ca10dc9e2c1d5d6193198aec6062ab2442f39de"
+      },
+      "og.png": {
+        "bytes": 498195,
+        "sha256": "811c1ad4d4f576456f6e3d87a4a2bfc724fe0a6ea4f0f28c4dbdfec6e77ad03a",
+        "dimensions": [
+          1200,
+          630
+        ]
+      },
+      "card.png": {
+        "bytes": 87681,
+        "sha256": "7a4b79d916907f0ff4e683f3ce597b6e5ebbb5d79c5d57d2e7fceb852f29ec98",
+        "dimensions": [
+          1600,
+          900
+        ]
+      }
+    }
+  },
+  "integrity": {
+    "bothInlineScriptsIdenticalToAccepted": true,
+    "scriptSha256": [
+      "be602d8a55f0cd17092efe718597d11039309a9f8aa74ab65cf2e4820087e516",
+      "a9a611b84b32dad66ef84f9835445a04dd6a8a8686122eebc7451477dff50dbd"
+    ],
+    "idsAndOrderUnchanged": true,
+    "dependencyOrBuildConfigurationChanged": false
+  },
+  "syntaxAndTypecheck": {
+    "nodeParser": "passed",
+    "typescript": "5.9.3",
+    "decorativeScriptCheckJsNoEmit": "passed",
+    "wholeApplicationTypecheck": "not performed; protected plain JavaScript received parser/integrity/interaction checks"
+  },
+  "browser": {
+    "engine": "Chromium 154.0.8037.0 headless shell through local Playwright",
+    "method": "Bounded local static server, /preview/ subpath; curl relay for real external fonts/API/read-only RPC",
+    "viewportWidths": [
+      320,
+      390,
+      760,
+      1280,
+      1440
+    ],
+    "consoleErrors": [],
+    "externalRequestFailures": [],
+    "measurements": {
+      "live-read": {
+        "round": "342",
+        "board": "0 Wheelings adopted",
+        "fonts": [
+          {
+            "family": "Figtree",
+            "style": "normal",
+            "weight": "400"
+          },
+          {
+            "family": "Figtree",
+            "style": "normal",
+            "weight": "600"
+          },
+          {
+            "family": "Fraunces",
+            "style": "italic",
+            "weight": "700"
+          },
+          {
+            "family": "Fraunces",
+            "style": "normal",
+            "weight": "600"
+          },
+          {
+            "family": "Fraunces",
+            "style": "normal",
+            "weight": "700"
+          },
+          {
+            "family": "JetBrains Mono",
+            "style": "normal",
+            "weight": "400"
+          }
+        ]
+      },
+      "pause": {
+        "attribute": "translate(1010 237)",
+        "computed": "matrix(1, 0, 0, 1, 1010, 237)",
+        "box": {
+          "x": 1068.2353515625,
+          "y": 199.35293579101562,
+          "width": 135.88232421875,
+          "height": 156.4705810546875,
+          "top": 199.35293579101562,
+          "right": 1204.11767578125,
+          "bottom": 355.8235168457031,
+          "left": 1068.2353515625
+        },
+        "running": [
+          "paused"
+        ]
+      },
+      "nails-and-grain": {
+        "width": 340,
+        "height": 340,
+        "border": "12px",
+        "nail": "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"7\" cy=\"7\" r=\"3.2\"/>",
+        "innerNailEdge": 10.247222222222222,
+        "preserveAspectRatio": "none"
+      },
+      "parallax": {
+        "viewBox": "6 4 1088 392",
+        "layers": [
+          {
+            "transform": "matrix(1, 0, 0, 1, -1.11429, -0.6)",
+            "depth": ".3"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, -2.04286, -1.1)",
+            "depth": ".55"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, -3.71429, -2)",
+            "depth": "1"
+          }
+        ]
+      },
+      "stages": [
+        {
+          "name": "Egg",
+          "line": "Waiting for its first scored run.",
+          "headband": false,
+          "greenTie": false,
+          "goldCollar": false
+        },
+        {
+          "name": "Pup",
+          "line": "Hatched by a first scored run.",
+          "headband": false,
+          "greenTie": false,
+          "goldCollar": false
+        },
+        {
+          "name": "Runner",
+          "line": "Earns its headband.",
+          "headband": true,
+          "greenTie": false,
+          "goldCollar": false
+        },
+        {
+          "name": "Champion",
+          "line": "Adds a green cape.",
+          "headband": true,
+          "greenTie": true,
+          "goldCollar": false
+        },
+        {
+          "name": "Legend",
+          "line": "Takes the crown.",
+          "headband": true,
+          "greenTie": true,
+          "goldCollar": false
+        }
+      ],
+      "footer": {
+        "ground": "#182b36",
+        "grass": "#426353",
+        "body": "<ellipse cx=\"0\" cy=\"-4\" rx=\"28\" ry=\"17\" fill=\"url(#furG)\" stroke=\"#a67443\" stroke-width=\"1.5\"></ellipse>"
+      },
+      "share-card": {
+        "size": [
+          1200,
+          630
+        ],
+        "pixel83": [
+          249,
+          243,
+          223,
+          255
+        ],
+        "pixel84": [
+          248,
+          243,
+          222,
+          255
+        ]
+      },
+      "rank-column": {
+        "head": {
+          "x": 134,
+          "y": 326.625,
+          "width": 8,
+          "height": 14,
+          "top": 326.625,
+          "right": 142,
+          "bottom": 340.625,
+          "left": 134
+        },
+        "cell": {
+          "x": 134,
+          "y": 371.8125,
+          "width": 8,
+          "height": 20,
+          "top": 371.8125,
+          "right": 142,
+          "bottom": 391.8125,
+          "left": 134
+        }
+      },
+      "actual-first-line-text": {
+        "eyebrow": {
+          "x": 36,
+          "y": 38,
+          "width": 147,
+          "height": 14,
+          "top": 38,
+          "right": 183,
+          "bottom": 52,
+          "left": 36
+        },
+        "pause": {
+          "x": 289,
+          "y": 32.40625,
+          "width": 69,
+          "height": 14,
+          "top": 32.40625,
+          "right": 358,
+          "bottom": 46.40625,
+          "left": 289
+        }
+      },
+      "RPC-offline-1280": {
+        "gap": 24,
+        "fallbackRound": "1,531",
+        "genesis": 0
+      },
+      "RPC-offline-390": {
+        "gap": 16,
+        "fallbackRound": "1,531",
+        "genesis": 0
+      },
+      "reduced-motion": {
+        "active": 0,
+        "layers": [
+          "none",
+          "none",
+          "none"
+        ],
+        "cottage": "matrix(1, 0, 0, 1, 1010, 237)"
+      },
+      "overflow-760": {
+        "viewport": 760,
+        "scroll": 760
+      },
+      "overflow-1440": {
+        "viewport": 1440,
+        "scroll": 1440
+      }
+    },
+    "mobile": {
+      "320": {
+        "viewport": 320,
+        "scroll": 320,
+        "hero": {
+          "x": 16,
+          "y": 12,
+          "width": 288,
+          "height": 498.3125,
+          "top": 12,
+          "right": 304,
+          "bottom": 510.3125,
+          "left": 16
+        },
+        "title": {
+          "x": 36,
+          "y": 75.1875,
+          "width": 248,
+          "height": 52,
+          "top": 75.1875,
+          "right": 284,
+          "bottom": 127.1875,
+          "left": 36
+        },
+        "italic": {
+          "x": 190.703125,
+          "y": 69.1875,
+          "width": 98.671875,
+          "height": 64,
+          "top": 69.1875,
+          "right": 289.375,
+          "bottom": 133.1875,
+          "left": 190.703125
+        },
+        "italicText": {
+          "x": 190.703125,
+          "y": 69.1875,
+          "width": 95.5625,
+          "height": 64,
+          "top": 69.1875,
+          "right": 286.265625,
+          "bottom": 133.1875,
+          "left": 190.703125
+        },
+        "pause": {
+          "x": 199,
+          "y": 24,
+          "width": 89,
+          "height": 32,
+          "top": 24,
+          "right": 288,
+          "bottom": 56,
+          "left": 199
+        },
+        "chip": {
+          "x": 36,
+          "y": 283.125,
+          "width": 115,
+          "height": 27.1875,
+          "top": 283.125,
+          "right": 151,
+          "bottom": 310.3125,
+          "left": 36
+        },
+        "moon": {
+          "x": 213.37754821777344,
+          "y": 318.6951599121094,
+          "width": 40.39796447753906,
+          "height": 40.39794921875,
+          "top": 318.6951599121094,
+          "right": 253.7755126953125,
+          "bottom": 359.0931091308594,
+          "left": 213.37754821777344
+        },
+        "wheelFoot": {
+          "x": 127.12245178222656,
+          "y": 496.66455078125,
+          "width": 80.79591369628906,
+          "height": 0,
+          "top": 496.66455078125,
+          "right": 207.91836547851562,
+          "bottom": 496.66455078125,
+          "left": 127.12245178222656
+        },
+        "pet": {
+          "x": 32,
+          "y": 698.703125,
+          "width": 88,
+          "height": 172.75,
+          "top": 698.703125,
+          "right": 120,
+          "bottom": 871.453125,
+          "left": 32
+        },
+        "connect": {
+          "x": 32,
+          "y": 526.3125,
+          "width": 135,
+          "height": 44,
+          "top": 526.3125,
+          "right": 167,
+          "bottom": 570.3125,
+          "left": 32
+        }
+      },
+      "390": {
+        "viewport": 390,
+        "scroll": 390,
+        "hero": {
+          "x": 16,
+          "y": 12,
+          "width": 358,
+          "height": 467.125,
+          "top": 12,
+          "right": 374,
+          "bottom": 479.125,
+          "left": 16
+        },
+        "title": {
+          "x": 36,
+          "y": 75.1875,
+          "width": 318,
+          "height": 56,
+          "top": 75.1875,
+          "right": 354,
+          "bottom": 131.1875,
+          "left": 36
+        },
+        "italic": {
+          "x": 201.609375,
+          "y": 68.1875,
+          "width": 106.046875,
+          "height": 69,
+          "top": 68.1875,
+          "right": 307.65625,
+          "bottom": 137.1875,
+          "left": 201.609375
+        },
+        "italicText": {
+          "x": 201.609375,
+          "y": 68.1875,
+          "width": 102.6875,
+          "height": 69,
+          "top": 68.1875,
+          "right": 304.296875,
+          "bottom": 137.1875,
+          "left": 201.609375
+        },
+        "pause": {
+          "x": 269,
+          "y": 24,
+          "width": 89,
+          "height": 32,
+          "top": 24,
+          "right": 358,
+          "bottom": 56,
+          "left": 269
+        },
+        "chip": {
+          "x": 201,
+          "y": 251.9375,
+          "width": 115,
+          "height": 27.1875,
+          "top": 251.9375,
+          "right": 316,
+          "bottom": 279.125,
+          "left": 201
+        },
+        "moon": {
+          "x": 283.3775634765625,
+          "y": 287.5076599121094,
+          "width": 40.39794921875,
+          "height": 40.39794921875,
+          "top": 287.5076599121094,
+          "right": 323.7755126953125,
+          "bottom": 327.9056091308594,
+          "left": 283.3775634765625
+        },
+        "wheelFoot": {
+          "x": 197.12245178222656,
+          "y": 465.47705078125,
+          "width": 80.79591369628906,
+          "height": 0,
+          "top": 465.47705078125,
+          "right": 277.9183654785156,
+          "bottom": 465.47705078125,
+          "left": 197.12245178222656
+        },
+        "pet": {
+          "x": 36,
+          "y": 654.90625,
+          "width": 112,
+          "height": 134.375,
+          "top": 654.90625,
+          "right": 148,
+          "bottom": 789.28125,
+          "left": 36
+        },
+        "connect": {
+          "x": 20,
+          "y": 495.125,
+          "width": 135,
+          "height": 44,
+          "top": 495.125,
+          "right": 155,
+          "bottom": 539.125,
+          "left": 20
+        }
+      }
+    }
+  },
+  "interactions": {
+    "results": [
+      {
+        "name": "Keyboard connection and wallet-app choices",
+        "passed": true,
+        "detail": "Enter opens all four existing app links; Back restores Connect."
+      },
+      {
+        "name": "EIP-6963 connection and first-screen Adopt",
+        "passed": true,
+        "detail": "Named provider connects on Sepolia; Adopt fits 390\u00d7844."
+      },
+      {
+        "name": "Adopt request and cancellation",
+        "passed": true,
+        "detail": "Correct deployed contract, selector, zero value and explicit Sepolia chain; rejection recovers."
+      },
+      {
+        "name": "Late chain guard",
+        "passed": true,
+        "detail": "A network change during gas estimation stops transaction submission with the prescribed recovery message."
+      },
+      {
+        "name": "Wrong-network recovery",
+        "passed": true,
+        "detail": "Original Switch to Sepolia control requests wallet_switchEthereumChain."
+      },
+      {
+        "name": "Unmodified pet SVG and first-screen Cheer",
+        "passed": true,
+        "detail": "Injected SVG bytes are unchanged with no filter/transform; Cheer fits 390\u00d7844."
+      },
+      {
+        "name": "Cheer request and cancellation",
+        "passed": true,
+        "detail": "Correct pet ID, selector, and Sepolia chain; rejection restores usable action."
+      },
+      {
+        "name": "Cheering decoration",
+        "passed": true,
+        "detail": "Sparkles belong to a pseudo-element; the image remains untouched."
+      },
+      {
+        "name": "Populated mobile leaderboard",
+        "passed": true,
+        "detail": "All final columns are reachable by local scrolling at 320/390 without horizontal page overflow."
+      },
+      {
+        "name": "Disconnect",
+        "passed": true,
+        "detail": "Clears the original saved-wallet setting and restores Connect."
+      },
+      {
+        "name": "Console and runtime",
+        "passed": true,
+        "detail": "No console errors or uncaught exceptions during the live read and synthetic interaction checks."
+      }
+    ],
+    "errors": [],
+    "note": "Only initial reads are live; the wallet provider, owned-pet artwork and subsequent RPC replies are test fixtures. No transaction was signed or broadcast."
+  },
+  "taste": {
+    "passed": 14,
+    "total": 16,
+    "checks": [
+      {
+        "name": "render",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 11574,
+        "output": "renders, no script errors or missing local files"
+      },
+      {
+        "name": "layout",
+        "passed": false,
+        "exitCode": 1,
+        "durationMs": 0,
+        "output": "no horizontal scroll at 320, 390 or 1440\n1 text boxes overlap:\n390px: div.wrap:nth-of-type(1) > header.hero > label.scene-control > span overlaps div.wrap:nth-of-type(1) > header.hero > div.hero-copy:nth-of-type(1) > span.eyebrow (\"Pause scene | Squeekchain \u00b7 Sepolia pets\")\nno floating control covers text\nno text cut off by overflow: hidden"
+      },
+      {
+        "name": "targets",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 0,
+        "output": "all 3 controls at least 24px or spaced at 390\n2 under the 44px comfortable size"
+      },
+      {
+        "name": "contrast",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 0,
+        "output": "all measured text meets 4.5:1 (3:1 large)\n102 text boxes over images, video, canvas or gradients not measured"
+      },
+      {
+        "name": "casing",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 1,
+        "output": "3 text boxes inside SVG artwork not measured\nno all-caps text in content"
+      },
+      {
+        "name": "tracking",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 0,
+        "output": "letter-spacing natural in content (display type may run tight)"
+      },
+      {
+        "name": "eyebrows",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 0,
+        "output": "no kicker labels above headings"
+      },
+      {
+        "name": "type-sizes",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 1,
+        "output": "390: 4 sizes in use, 4 with one-offs (12px\u00d732, 14px\u00d712, 24px\u00d713, 56px\u00d72)\n1440: 5 sizes in use, 6 with one-offs (12px\u00d730, 14px\u00d718, 16px\u00d72, 24px\u00d712, 36px\u00d71, 96px\u00d72)\nbar: 6 sizes used more than once, 8 counting one-offs, per width"
+      },
+      {
+        "name": "type-faces",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 0,
+        "output": "families (3): figtree, fraunces, jetbrains mono\nweights (3): 400, 600, 700"
+      },
+      {
+        "name": "glyphs",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 0,
+        "output": "no em dashes or emoji in text"
+      },
+      {
+        "name": "slogans",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 0,
+        "output": "no two-beat taglines"
+      },
+      {
+        "name": "repetition",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 1,
+        "output": "no repeated lines"
+      },
+      {
+        "name": "copy-budget",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 0,
+        "output": "prose on the first screen: 58 words at 390 (bar 60), 58 at 1440 (bar 90)\nall words on the first screen: 81 at 390, 81 at 1440\nwhole page: 309 words, 159 of them prose"
+      },
+      {
+        "name": "chrome",
+        "passed": false,
+        "exitCode": 1,
+        "durationMs": 0,
+        "output": "border and shadow together: 0\ncards inside cards: 1 (main.main-content > section.panel.stages:nth-of-type(5) > ol.stage-grid > li.stage-card.stage-legend:nth-of-type(5) in body > div.wrap:nth-of-type(1) > main.main-content > section.panel.stages:nth-of-type(5))\ngradient text: 0"
+      },
+      {
+        "name": "motion",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 0,
+        "output": "transition: all on 0 elements\nendless animations: 18; still running with reduced motion: 0"
+      },
+      {
+        "name": "share",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 0,
+        "output": "title \"Wheelings\", favicon, og:title, og:image, description"
+      }
+    ],
+    "manualDisposition": {
+      "layout": "False positive from full-width eyebrow block. Actual text x=36\u2013183 and Pause scene x=289\u2013358, 106px apart. Final probe shows no clipping/overflow.",
+      "chrome": "Required illustrated Legend card inside Stages, retained intentionally."
+    }
+  },
+  "limitations": [
+    "No real wallet signatures or transaction broadcast",
+    "No physical-device, screen-reader, native zoom or Safari/WebKit session",
+    "102 text boxes over images/gradients excluded from final contrast probe",
+    "Original stale round fallback reproduced and preserved under script lock",
+    "No publication or deployment"
+  ],
+  "evidence": [
+    "review/desktop-1280.png",
+    "review/desktop-first-screen.png",
+    "review/mobile-390.png",
+    "review/mobile-first-screen.png",
+    "og.png"
+  ]
+}

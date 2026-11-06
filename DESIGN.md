@@ -36,7 +36,7 @@ The existing Google Fonts request supplies Fraunces, Figtree and JetBrains Mono.
 
 | Role | Implementation |
 | --- | --- |
-| Product name | Fraunces 700, 96px desktop / 72px intermediate / 56px phone, line-height 1, tracking `-.055em`; italic gold “ings” |
+| Product name | Fraunces 700, 96px desktop / 72px intermediate / 56px phone / 52px below 359px, line-height 1, tracking `-.055em`; italic gold “ings” |
 | Pet name | Fraunces 600, 36px desktop, 24px below 760px, line-height 1.15 |
 | Section, step and stage headings | Fraunces 600, 24px, line-height 1.25, tracking `-.025em` |
 | Body | Figtree 400, 16px, line-height 1.6; compact descriptions 14px |
@@ -50,7 +50,7 @@ Fallbacks: Fraunces → Iowan Old Style / Palatino Linotype / Georgia; Figtree �
 
 ## Layout
 
-The content column is at most 1120px. Outer padding is 16px with safe-area support, and 32px at the top on desktop. Common spacing follows 4, 8, 12, 16, 20, 24, 32, 40 and 48px steps. Main sections have 24px gaps, reduced to 16px on phones. Default panels have 32px padding; the pet panel has 40px and a 48px column gap.
+The content column is at most 1120px. Outer padding is 16px with safe-area support, and 32px at the top on desktop. Common spacing follows 4, 8, 12, 16, 20, 24, 32, 40 and 48px steps. Main sections have 24px gaps, reduced to 16px on phones. A visible deployment/reachability notice has the same gap above it, separating it from the hero. Default panels have 32px padding; the pet panel has 40px and a 48px column gap.
 
 Existing section order is preserved: hero, deployment notice when needed, wallet, pet, current wheel, **new Stages**, board, scored rounds, footer. A semantic `main` groups the app panels. Existing text and element IDs are retained.
 
@@ -59,8 +59,8 @@ Existing section order is preserved: hero, deployment notice when needed, wallet
 | Above 980px | 340px pet art column; four stat tiles; five stage cards; three how-to columns |
 | 980px | Pet art column becomes 300px; stats use two columns; spacing reduces |
 | 760px | Compact hero type; how-to steps stack; Stages uses three columns; populated pet uses stacked art/info |
-| 540px | Hero text above a cropped landscape; 56px title; compact pet preview beside its heading; populated pet stats/actions span the panel; two stat columns; two stage columns with Legend spanning the final row |
-| 359px | Narrower pet preview and panel insets; content remains readable at 320px |
+| 540px | Hero text above a cropped landscape, with 200px bottom padding to clear the moon; 56px title; Pause scene stays at top:12px/right:16px; compact pet preview beside its heading; populated pet stats/actions span the panel; two stat columns; two stage columns with Legend spanning the final row |
+| 359px | 52px title, narrower pet preview and panel insets; content remains readable at 320px |
 
 The phone layout keeps the product and Connect wallet action on the initial 390×844 screen. Once connected on a phone, the hero becomes compact and its scene dims behind the copy. Adopt remains visible, and Cheer occupies the row immediately below the pet heading, before supporting stats. All copy and section order remain intact. Long pet labels flow inside `.pet-heading`; they are not absolutely positioned. At small widths the populated leaderboard scrolls inside `.tablewrap`, which is keyboard focusable and labelled. No values are ellipsized by CSS. Empty board messages use the available width without unnecessary horizontal scrolling; empty-table column headings are suppressed on phones.
 
@@ -70,22 +70,23 @@ Observed widths: 320, 390, 760, 1280 and 1440px. These viewport checks are not a
 
 Panels use a quiet diagonal glass highlight and an inset top highlight. The hero has a soft external shadow; the wallet row is separated by a single line. The pet frame supplies the strongest tactile depth: warm illumination behind the wood, carved grain, corner nails and a restrained shadow.
 
-The landscape has three parallax depths, layered hills and trees, a lit cottage, fences, soft moon beams, clouds, fireflies, mushrooms and a lantern. Wheel spokes rotate independently of the shaded running hamster. Podium lighting is confined to the first populated board row; empty states have no podium treatment.
+The landscape has three parallax depths, layered hills and trees, a lit cottage, fences, soft moon beams, clouds, fireflies, mushrooms and a lantern. Its `6 4 1088 392` viewBox crops past the maximum parallax travel so layer edges stay outside the frame. Wheel spokes rotate independently of the shaded running hamster. The footer reuses the hero's `furG`, `creamG` and `earG` gradients, `#a67443` outline, `#182b36` ground and `#426353` grass. Podium lighting is confined to the first populated board row; empty states have no podium treatment.
 
 ## Shapes
 
-Main panel radius is 24px, 20px on phones. Hero radius is 28px, 22px on phones. Buttons use 10px, large actions 12px, stage portraits 16px, table rows 12px, and toast 14px. The wooden frame uses a 12px rim, reduced to 8px on phones. Its inner image is contained without cropping, filtering or animation transforms.
+Main panel radius is 24px, 20px on phones. Hero radius is 28px, 22px on phones. Buttons use 10px, large actions 12px, stage portraits 16px, table rows 12px, and toast 14px. The wooden frame uses a 12px rim, reduced to 8px on phones. Its overlay SVG uses `preserveAspectRatio='none'` to follow rectangular placeholders; nail centers at 7/353 in the 360-unit viewBox and their slots stay inside the wood. Its inner image is contained without cropping, filtering or animation transforms.
 
 ## Components
 
-- **Hero:** `header.hero`, `.scene`, `.hero-copy`, `.chips`. The scene is decorative and excluded from the accessibility tree. Its native “Pause scene” checkbox pauses the scene without changing dapp logic. Mouse parallax has at most 4px horizontal and 2.5px vertical travel at full depth, stops on pointer exit, and is disabled for touch, coarse pointers and reduced motion.
+- **Hero:** `header.hero`, `.scene`, `.hero-copy`, `.chips`. The scene is decorative and excluded from the accessibility tree. Its native “Pause scene” checkbox pauses animation without overriding SVG placement transforms; the existing decorative script clears parallax. Mouse parallax has at most 4px horizontal and 2.5px vertical travel at full depth, stops on pointer exit, and is disabled for touch, coarse pointers and reduced motion.
 - **Panels:** `.panel`, `.section-title`, `.section-heading`, `.sub`, `.label`. Reuse the common padding and typography rather than adding a new surface or type scale.
 - **Wallet/actions:** `.btn`, `.primary`, `.big`, `.wallet`, `.wbtns`. Controls have at least 44px height; large actions have at least 54px height. Hover, active, disabled and keyboard focus states are explicit. Existing wallet discovery, connection, network switching and transaction behavior are retained.
 - **Pet:** `.home`, `.petart`, `.pet-heading`, `.stats`, `.bar`, `.actions`, `.queue`. The frame decorations are pseudo-elements that survive the original script replacing the image. `.cheering` produces a 1.4-second burst of stars; reduced motion uses a static star treatment. The contract SVG itself stays untouched.
-- **Stages:** `.stage-grid`, `.stage-card`, `.stage-picture`, `.stage-xp`, `.mood-legend`. Egg, Pup, Runner, Champion and Legend use shared SVG fur/cream gradients. Gear identifies growth: headband, green cape, crown. Thresholds and mood/collar notes are real text, not baked into pictures.
-- **Board:** `.tablewrap`, `table`, `.num`, `.thumb`, `#board`. Gold/silver/bronze medal ranks, aligned numeric columns, warm first-place glow and a separate “me” highlight. Owner links remain usable and every column remains reachable.
+- **Stages:** `.stage-grid`, `.stage-card`, `.stage-picture`, `.stage-xp`, `.mood-legend`. Egg, Pup, Runner, Champion and Legend use shared SVG fur/cream gradients. Gear accumulates: Runner's headband remains on Champion and Legend; Champion adds a green cape/tie; Legend adds its crown. The gold collar is reserved for the Squeek-holder note, not depicted as a Legend reward. Captions name each change. Thresholds and mood/collar notes are real text, not baked into pictures.
+- **Board:** `.tablewrap`, `table`, `.num`, `.thumb`, `#board`. Gold/silver/bronze medal ranks with a centered rank header, aligned numeric columns, warm first-place glow and a separate “me” highlight. Owner links remain usable and every column remains reachable.
 - **Toast:** `#toast` retains its existing polite status role and message lifecycle. A CSS information icon, solid readable surface, safe-area-aware placement and responsive width improve presentation without changing its text or timer.
 - **Motion:** 600ms one-time section entrances start from 75% opacity; content is visible before enhancement. Interactive transitions name their properties. The reduced-motion rule disables all animation/transition/parallax. The live pet image has no transform or filter.
+- **Share image:** `artwork/og.html` uses a full-height 1733×630 scene offset left by 420px, behind the unchanged title and supporting line. `scripts/render-og.mjs` renders the 1200×630 `og.png`; the site export includes the same PNG. The scene fills the card without a top band or decorative rule.
 
 ## Do's and don'ts
 

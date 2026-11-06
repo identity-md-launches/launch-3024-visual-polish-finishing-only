@@ -1,0 +1,3 @@
+# Submission path budget: /.imd-responses.json <= 16 KiB; /.gitignore <= 256 bytes.
+# Include only the required reviewer responses; cache/dependency exclusions remain.
+!/.imd-responses.json
